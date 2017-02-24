@@ -1,0 +1,91 @@
+1.List the components of hadoop2.X and explain each component in detail.
+Hadoop 2.x is composed of 3 components.They are:
+
+(1)HDFS
+(2)MAPREDUCE
+(3)YARN
+
+HDFS 
+*HDFS stands for Hadoop Distributed File System.
+*HDFS is developed using java.
+*Hadoop uses HDFS for storage purpose.
+*It  deals with a storage of large amounts of data in a reliable manner .
+*It helps to stream the data to user applications with high bandwidth.
+*HDFS runs on commodity hardware.
+*HDFS stores files across the collection of servers in a cluster.
+*HDFS detects and compensates for hardware issues.
+*Shell commands is supported by Hadoop to interact with HDFS
+Advantages:
+It  is  
+ *fault-tolerant
+ *scalable
+ *distributed storage system.
+ *HDFS is composed of two components.They are:
+              -Namenode
+              -Datanode
+ *Namenode:
+              - The namenode is used to store metadata.
+              -It acts as the master node.
+              -It stores the information about the data nodes like
+               how many blocks are stored in the nodes,which node 
+               holds the data,node locations etc.
+ *Secondary namenode:
+              -secondary namenodes performs house-keeping activities 
+               for name node like periodic merging and it is used for edits. 
+
+ *Datanode:
+              -The data nodes are used to store the actual data.
+              -It acts as slave nodes.
+              -The default size of the block is 64MB.
+              -It stores the data in terms of blocks
+              -The data node acts as the heart beat of the name node 
+               as it periodically sends signals to the name node
+               to check whether it is active.
+
+
+MAPREDUCE
+
+   *Map reduce is also known as distributed data processing or batch processing model 
+   *It distributes the data across several machines.      
+   *The software framework which is used to process large amounts of data parallelly on large clusters is known
+    as mapreduce.  
+
+ - Map reduce is composed of two components .They are:
+                -Job tracker.
+                -Task tracker. 
+*Job Tracker:
+               -The main role of job tracker is to assign the map reduce task to the task tracker.
+               -It is also used to re-assign some task to the other task tracker
+                when the previous task trackers fails or when it gets shut down.
+               -It is used to control the overall execution of map reduce.
+               -Job tracker also maintains the status of the task tracker.
+
+*Task Tracker:
+               -The task tracker sends the status back to the job tracker              
+               -The role of the task tracker is to execute the task assigned to it by the job tracker.
+               -It periodically communicates with the task tracker.
+               -It runs individual map-reduce tasks on the data nodes.
+
+YARN
+
+ *YARN stands for  Yet Another Resource Negotiator .
+ *A sofware that decouples Mapreduce's resource management and scheduling capabilities from the data , thus
+   enabling hadoop for supporting more processing approaches and a wide range of application is known as YARN.
+ *It is a cluster management technology of hadoop2.
+ *YARN includes  a central resource manager that reconciles way of applications  that uses hadoop system resources
+  with the node manager agents which monitor processing operations of the individual cluster nodes.
+ *YARN is one of the key features of second version of hadoop.
+ *YARN is designed to split up the functionalities of resource management and monitoring into separate daemons.
+ *It was found by Apache Software Foundation 
+ *YARN is an open source distributed processing framework.
+ *YARN extends the power pf hadoop and new technologies found within the data center.
+Advantages
+*YARN is cost effective,
+*YARN has linear-scale storage and processing
+
+
+
+        
+        
+
+        
